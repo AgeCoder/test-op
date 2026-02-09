@@ -31,7 +31,7 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
-    port: process.env.PORT,
+    port: Number(process.env.PORT) || 5173,
     strictPort: true,
     fs: {
       strict: true,
@@ -39,7 +39,7 @@ export default defineConfig({
     },
   },
   preview: {
-    port: process.env.PORT,
+    port: Number(process.env.PORT) || 5173,
     strictPort: true,
   },
 });
