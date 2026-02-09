@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
-
 export default defineConfig({
   plugins: [
     react(),
@@ -32,7 +31,7 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
-    port: 5173,
+    port: process.env.PORT,
     strictPort: true,
     fs: {
       strict: true,
@@ -40,7 +39,7 @@ export default defineConfig({
     },
   },
   preview: {
-    port: 5173,
+    port: process.env.PORT,
     strictPort: true,
   },
 });
